@@ -1,0 +1,78 @@
+Test report generated: 2026-10-27 11:51 UTC
+Python 3.13.17 | scikit-learn 1.9.1 | pandas 3.0.5 | numpy 2.5.3 | pytest 9.1.1
+Git commit: 0a4313d
+
+============================= test session starts ==============================
+platform linux -- Python 3.13.17, pytest-9.1.1, pluggy-1.7.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.17', 'Platform': 'Linux-6.18.44-fc-v165-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.7.0'}, 'Plugins': {'platformdirs': '4.13.0', 'anyio': '4.15.1', 'metadata': '3.1.1', 'html': '4.2.0', 'cov': '7.1.0'}, 'JAVA_HOME': '/usr/lib/jvm/java-21-openjdk-amd64'}
+rootdir: /home/claude/aishab-creator/mma3001-project
+configfile: pytest.ini
+testpaths: tests, src
+plugins: platformdirs-4.13.0, anyio-4.15.1, metadata-3.1.1, html-4.2.0, cov-7.1.0
+collecting ... collected 46 items
+
+tests/test_data.py::test_rul_label_is_last_cycle_minus_cycle PASSED      [  2%]
+tests/test_data.py::test_test_frame_gets_no_rul_label PASSED             [  4%]
+tests/test_data.py::test_rows_are_sorted_even_if_input_is_shuffled PASSED [  6%]
+tests/test_data.py::test_wrong_column_count_is_rejected PASSED           [  8%]
+tests/test_data.py::test_duplicate_engine_cycle_is_rejected PASSED       [ 10%]
+tests/test_data.py::test_non_finite_values_are_rejected[nan] PASSED      [ 13%]
+tests/test_data.py::test_non_finite_values_are_rejected[inf] PASSED      [ 15%]
+tests/test_data.py::test_non_finite_values_are_rejected[-inf] PASSED     [ 17%]
+tests/test_data.py::test_input_is_not_modified PASSED                    [ 19%]
+tests/test_data.py::test_load_data_round_trip PASSED                     [ 21%]
+tests/test_data.py::test_missing_file_raises PASSED                      [ 23%]
+tests/test_data.py::test_rul_file_with_two_columns_is_rejected PASSED    [ 26%]
+tests/test_features.py::test_features_do_not_depend_on_future_rows[False] PASSED [ 28%]
+tests/test_features.py::test_features_do_not_depend_on_future_rows[True] PASSED [ 30%]
+tests/test_features.py::test_changing_future_sensor_values_does_not_change_past_features[False] PASSED [ 32%]
+tests/test_features.py::test_changing_future_sensor_values_does_not_change_past_features[True] PASSED [ 34%]
+tests/test_features.py::test_engines_are_independent PASSED              [ 36%]
+tests/test_features.py::test_rolling_mean_std_and_delta_match_hand_calculation PASSED [ 39%]
+tests/test_features.py::test_change_from_start_and_slope_hand_calculation PASSED [ 41%]
+tests/test_features.py::test_output_is_finite_and_does_not_modify_input PASSED [ 43%]
+tests/test_features.py::test_build_features_drops_sensors_constant_on_fit_only PASSED [ 45%]
+tests/test_features.py::test_build_features_rejects_unknown_variant PASSED [ 47%]
+tests/test_features.py::test_build_features_columns_exist_and_are_finite PASSED [ 50%]
+tests/test_features.py::test_regime_statistics_come_from_fit_data_only PASSED [ 52%]
+tests/test_features.py::test_regime_z_scores_are_centred_within_each_regime PASSED [ 54%]
+tests/test_metrics.py::test_capped_target_clips_only_values_above_cap PASSED [ 56%]
+tests/test_metrics.py::test_uncapped_target_is_unchanged PASSED          [ 58%]
+tests/test_metrics.py::test_cap_label PASSED                             [ 60%]
+tests/test_metrics.py::test_score_hand_calculation PASSED                [ 63%]
+tests/test_metrics.py::test_near_failure_metrics_use_actual_rul_at_most_30 PASSED [ 65%]
+tests/test_metrics.py::test_near_metrics_are_nan_when_no_engine_is_near_failure PASSED [ 67%]
+tests/test_metrics.py::test_common100_clips_both_prediction_and_truth PASSED [ 69%]
+tests/test_metrics.py::test_perfect_prediction_gives_zero_error_and_r2_of_one PASSED [ 71%]
+tests/test_metrics.py::test_positive_bias_means_overestimated_life PASSED [ 73%]
+tests/test_metrics.py::test_r2_is_nan_for_single_point_or_constant_truth PASSED [ 76%]
+tests/test_metrics.py::test_shape_mismatch_and_nonfinite_predictions_are_rejected PASSED [ 78%]
+tests/test_validation_and_model.py::test_engine_split_is_disjoint_and_sized_by_engines PASSED [ 80%]
+tests/test_validation_and_model.py::test_engine_split_is_reproducible PASSED [ 82%]
+tests/test_validation_and_model.py::test_snapshots_truncate_each_engine_within_life_bounds PASSED [ 84%]
+tests/test_validation_and_model.py::test_snapshots_are_identical_for_the_same_seed PASSED [ 86%]
+tests/test_validation_and_model.py::test_snapshot_keeps_true_rul_of_the_full_engine PASSED [ 89%]
+tests/test_validation_and_model.py::test_model_is_reproducible_with_same_seed PASSED [ 91%]
+tests/test_validation_and_model.py::test_model_median_imputer_handles_missing_values PASSED [ 93%]
+tests/test_validation_and_model.py::test_pipeline_end_to_end_respects_training_cap PASSED [ 95%]
+tests/test_validation_and_model.py::test_pipeline_learns_signal_better_than_mean_predictor PASSED [ 97%]
+src/cmapss/metrics.py::cmapss.metrics.cap_label PASSED                   [100%]
+
+- generated xml file: /home/claude/aishab-creator/mma3001-project/tests/report/test_report.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.17-final-0 _______________
+
+Name                       Stmts   Miss  Cover   Missing
+--------------------------------------------------------
+src/cmapss/__init__.py         1      0   100%
+src/cmapss/data.py            31      1    97%   115
+src/cmapss/features.py        58      1    98%   148
+src/cmapss/metrics.py         19      0   100%
+src/cmapss/models.py           5      0   100%
+src/cmapss/validation.py      17      0   100%
+--------------------------------------------------------
+TOTAL                        131      2    98%
+Coverage HTML written to dir tests/report/coverage
+- Generated html report: file:///home/claude/aishab-creator/mma3001-project/tests/report/test_report.html -
+============================== 46 passed in 4.61s ==============================
