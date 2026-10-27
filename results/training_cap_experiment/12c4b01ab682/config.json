@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    "FD001",
+    "FD002",
+    "FD003",
+    "FD004"
+  ],
+  "caps": [
+    75,
+    100,
+    125,
+    150,
+    175,
+    200,
+    null
+  ],
+  "split_seeds": [
+    42,
+    52,
+    62
+  ],
+  "n_estimators": 150,
+  "variant": "Improved RF",
+  "window": 5,
+  "random_state": 42,
+  "selection": "mean validation raw_RMSE",
+  "sklearn": "1.9.1",
+  "python": "3.12.1"
+}

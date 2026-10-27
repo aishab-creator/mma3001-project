@@ -1,0 +1,5 @@
+model,baseline_process_RSS_MiB,peak_process_RSS_MiB,sampled_RSS_increase_MiB
+Mean predictor,488.046875,488.421875,0.375
+Ridge regression,488.390625,488.453125,0.0625
+Random Forest,488.4375,514.484375,26.046875
+Histogram Gradient Boosting,464.421875,522.546875,58.125

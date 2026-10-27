@@ -1,0 +1,2 @@
+platform,processor,python_version,sklearn_version,logical_cpu_count,system_memory_GiB,thread_limit,training_rows,validation_rows,training_engines,validation_engines,features,training_RUL_cap,timing_repeats
+macOS-27.0.1-arm64-arm-64bit,arm,3.12.1,1.9.1,8,16.0,1,43464,520,208,52,88,100,3

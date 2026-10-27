@@ -1,0 +1,41 @@
+Profile of pipeline fitting and validation prediction.
+Cumulative times overlap for nested function calls.
+
+         20678 function calls (20515 primitive calls) in 0.334 seconds
+
+   Ordered by: cumulative time
+   List reduced from 563 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/2    0.000    0.000    0.331    0.166 _set_output.py:325(wrapped)
+      3/1    0.001    0.000    0.331    0.331 base.py:1381(wrapper)
+        1    0.000    0.000    0.330    0.330 pipeline.py:578(fit)
+        1    0.000    0.000    0.330    0.330 pipeline.py:516(_fit)
+        1    0.000    0.000    0.329    0.329 memory.py:330(__call__)
+        1    0.000    0.000    0.329    0.329 pipeline.py:1578(_fit_transform_one_with_callbacks)
+        1    0.000    0.000    0.329    0.329 pipeline.py:1553(_fit_transform_one)
+        1    0.000    0.000    0.329    0.329 base.py:913(fit_transform)
+        1    0.000    0.000    0.309    0.309 _base.py:430(fit)
+        1    0.000    0.000    0.292    0.292 _base.py:529(_dense_fit)
+        1    0.000    0.000    0.291    0.291 extras.py:678(median)
+        1    0.000    0.000    0.291    0.291 _function_base_impl.py:3827(_ureduce)
+        1    0.000    0.000    0.290    0.290 extras.py:756(_median)
+        1    0.000    0.000    0.283    0.283 core.py:7238(sort)
+        1    0.001    0.001    0.279    0.279 core.py:5788(sort)
+        1    0.000    0.000    0.210    0.210 core.py:5613(argsort)
+        1    0.205    0.205    0.205    0.205 {method 'argsort' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.061    0.031 _shape_base_impl.py:60(take_along_axis)
+        3    0.061    0.020    0.061    0.020 core.py:3283(__getitem__)
+        3    0.000    0.000    0.028    0.009 _base.py:331(_validate_input)
+        4    0.000    0.000    0.028    0.007 validation.py:2932(validate_data)
+        4    0.001    0.000    0.026    0.007 validation.py:733(check_array)
+        2    0.009    0.004    0.022    0.011 _base.py:601(transform)
+        6    0.000    0.000    0.015    0.003 generic.py:2015(__array__)
+        6    0.001    0.000    0.015    0.002 frame.py:1105(_values)
+        4    0.000    0.000    0.014    0.004 frame.py:16609(values)
+        4    0.000    0.000    0.014    0.004 managers.py:1822(as_array)
+        4    0.014    0.004    0.014    0.004 managers.py:1898(_interleave)
+        5    0.000    0.000    0.008    0.002 _array_api.py:962(_asarray_with_order)
+    22/19    0.000    0.000    0.008    0.000 {built-in method numpy.asarray}
+
+
