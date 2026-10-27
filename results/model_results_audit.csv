@@ -1,0 +1,242 @@
+Dataset,Model,Pipeline / variant,Training cap,Calibration,Evaluation split,Target,Metric column,RMSE,Source CSV,Evidence
+CHECK,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,31.31228656,results/metrics/Old metrics /initial_model_results.csv,Reported metric
+CHECK,Linear regression,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,31.65595538,results/metrics/Old metrics /initial_model_results.csv,Reported metric
+CHECK,Mean RUL baseline,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,65.71544508,results/metrics/Old metrics /initial_model_results.csv,Reported metric
+CHECK,Histogram Gradient Boosting,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_cycles,18.261890745769406,results/outputs/model_comparison/model_comparison_summary.csv,Reported metric
+CHECK,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_cycles,18.556033183943885,results/outputs/model_comparison/model_comparison_summary.csv,Reported metric
+CHECK,Ridge regression,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_cycles,19.51502047183633,results/outputs/model_comparison/model_comparison_summary.csv,Reported metric
+CHECK,Mean predictor,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_cycles,35.17144053484459,results/outputs/model_comparison/model_comparison_summary.csv,Reported metric
+CHECK,Histogram Gradient Boosting,CHECK,CHECK,CHECK,CHECK,CSV column: true_RUL,predicted_RUL vs true_RUL,18.261890745769406,results/outputs/model_comparison/validation_predictions.csv,Recalculated from 520 rows
+CHECK,Mean predictor,CHECK,CHECK,CHECK,CHECK,CSV column: true_RUL,predicted_RUL vs true_RUL,35.17144053484459,results/outputs/model_comparison/validation_predictions.csv,Recalculated from 520 rows
+CHECK,Random Forest,CHECK,CHECK,CHECK,CHECK,CSV column: true_RUL,predicted_RUL vs true_RUL,18.556033183943885,results/outputs/model_comparison/validation_predictions.csv,Recalculated from 520 rows
+CHECK,Ridge regression,CHECK,CHECK,CHECK,CHECK,CSV column: true_RUL,predicted_RUL vs true_RUL,19.51502047183633,results/outputs/model_comparison/validation_predictions.csv,Recalculated from 520 rows
+FD001,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,9.48226198268982,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD001,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,18.260113832795717,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD001,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,31.10081334306561,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD001,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,9.48226198268982,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD001,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,26.653733381550264,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD001,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,18.260113832795717,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD001,Improved Random Forest (RUL cap 100),CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,21.038174727291576,results/metrics/Old metrics /fd001_improved_test_metrics.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,21.038174727291576,results/metrics/Old metrics /fd001_improved_test_predictions.csv,Recalculated from 100 rows
+FD001,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,26.653733381550264,results/metrics/Old metrics /fd001_model_comparison.csv,Reported metric
+FD001,Improved Random Forest (RUL cap 100),CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,21.038174727291576,results/metrics/Old metrics /fd001_model_comparison.csv,Reported metric
+FD001,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,26.653733381550264,results/metrics/Old metrics /fd001_test_metrics.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,26.653733381550264,results/metrics/Old metrics /fd001_test_predictions.csv,Recalculated from 100 rows
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,18.260113832795717,results/metrics/fd001_improved_predictions.csv,Recalculated from 100 rows
+FD001,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,31.312286556508017,results/metrics/fd001_initial_model_results.csv,Reported metric
+FD001,Linear regression,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,31.655955380899123,results/metrics/fd001_initial_model_results.csv,Reported metric
+FD001,Mean RUL baseline,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,65.71544508456086,results/metrics/fd001_initial_model_results.csv,Reported metric
+FD001,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,26.653733381550264,results/metrics/fd001_test_metrics.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,26.653733381550264,results/metrics/fd001_test_predictions.csv,Recalculated from 100 rows
+FD001,RF + trends,CHECK,CHECK,CHECK,CHECK,official raw RUL,RMSE,18.260113832795717,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD001,RF + trends,CHECK,CHECK,CHECK,CHECK,RUL capped at 100,RMSE,9.48226198268982,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_reduction_percent,0.0,results/training_cap_experiment/12c4b01ab682/official_test_comparison.csv,Reported metric
+FD001,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.905076600578928,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD001,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.905076600578928,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD001,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,raw_RMSE,21.04534464874406,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD001,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,raw_RMSE,21.04534464874406,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD001,CHECK,fixed100,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,21.045344648744063,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 100 rows
+FD001,CHECK,validation_selected,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,21.045344648744063,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 100 rows
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,25.153479840076045,results/training_cap_experiment/12c4b01ab682/validation_predictions.csv,Recalculated from 420 rows
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,16.37436192320252,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,18.186799061363327,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,16.733512552057785,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,19.051717448452617,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,18.98065691006407,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,18.99392861987398,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,18.651298754504545,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,21.377178381965916,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,22.363339825784795,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,23.77201311183542,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,24.551155043140344,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,25.898254267949017,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,26.17398999043115,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,27.376420553131567,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,3.7112957846861705,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,6.225408161857982,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,1.0364550801530643,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,7.564437597009682,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,8.270896571171372,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,8.201586497719218,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD001,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,7.174379049489573,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,33.665590264190875,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD002,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,28.09873331628359,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD002,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,33.665590264190875,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.39892599839476,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Iteration 3 — unadjusted,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.469968729768407,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Iteration 3 — conservative,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,13.50755588124809,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,28.09873331628359,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,34.241275074763095,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Iteration 3 — unadjusted,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,34.44603091252499,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,Iteration 3 — conservative,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,36.87619350964687,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,34.241275074763095,results/metrics/fd002_improved_predictions.csv,Recalculated from 259 rows
+FD002,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,35.1337447053345,results/metrics/fd002_initial_model_results.csv,Reported metric
+FD002,Linear regression,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,37.7011686804921,results/metrics/fd002_initial_model_results.csv,Reported metric
+FD002,Mean RUL baseline,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,66.07693522993996,results/metrics/fd002_initial_model_results.csv,Reported metric
+FD002,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,28.09873331628359,results/metrics/fd002_test_metrics.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,28.09873331628359,results/metrics/fd002_test_predictions.csv,Recalculated from 259 rows
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CHECK,common100_RMSE,12.469968729768407,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CHECK,common100_RMSE,13.507555881248091,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CHECK,raw_RMSE,34.44603091252499,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CHECK,raw_RMSE,36.87619350964686,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD002,CHECK,RF + regimes,100,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,22.895931596509207,results/metrics/iteration5_validation_predictions.csv,Recalculated from 156 rows
+FD002,CHECK,RF + regimes,125,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,24.14129556390497,results/metrics/iteration5_validation_predictions.csv,Recalculated from 156 rows
+FD002,CHECK,RF + regimes,150,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,26.037482198426773,results/metrics/iteration5_validation_predictions.csv,Recalculated from 156 rows
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,22.366777370253125,results/metrics/iteration5_validation_predictions.csv,Recalculated from 156 rows
+FD002,CHECK,RF + trends,125,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,23.775091878763977,results/metrics/iteration5_validation_predictions.csv,Recalculated from 156 rows
+FD002,CHECK,RF + trends,150,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,25.12543319057747,results/metrics/iteration5_validation_predictions.csv,Recalculated from 156 rows
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CHECK,common100_RMSE,17.150992583469762,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + regimes,100,CHECK,CHECK,CHECK,common100_RMSE,17.916262093862265,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + regimes,125,CHECK,CHECK,CHECK,common100_RMSE,19.90032442618865,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + trends,125,CHECK,CHECK,CHECK,common100_RMSE,19.77584472191433,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + regimes,150,CHECK,CHECK,CHECK,common100_RMSE,20.346370495753217,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + trends,150,CHECK,CHECK,CHECK,common100_RMSE,20.266089852733103,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + trends,100,CHECK,CHECK,CHECK,raw_RMSE,22.221285435461784,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + regimes,100,CHECK,CHECK,CHECK,raw_RMSE,22.81025020632468,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + regimes,125,CHECK,CHECK,CHECK,raw_RMSE,24.052693218092543,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + trends,125,CHECK,CHECK,CHECK,raw_RMSE,23.70152211072926,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + regimes,150,CHECK,CHECK,CHECK,raw_RMSE,25.95954016841463,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,CHECK,RF + trends,150,CHECK,CHECK,CHECK,raw_RMSE,25.05926267061217,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD002,RF + regimes,CHECK,CHECK,CHECK,CHECK,official raw RUL,RMSE,34.241275074763095,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD002,RF + regimes,CHECK,CHECK,CHECK,CHECK,RUL capped at 100,RMSE,12.39892599839476,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_reduction_percent,0.0,results/training_cap_experiment/12c4b01ab682/official_test_comparison.csv,Reported metric
+FD002,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.864399291441066,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD002,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.864399291441066,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD002,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,raw_RMSE,34.65282972796111,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD002,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,raw_RMSE,34.65282972796111,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD002,CHECK,fixed100,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,34.65282972796111,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 259 rows
+FD002,CHECK,validation_selected,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,34.65282972796111,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 259 rows
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,26.361685154257284,results/training_cap_experiment/12c4b01ab682/validation_predictions.csv,Recalculated from 1092 rows
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,17.69818582786235,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,19.636558997814618,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,18.45603875378329,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,20.712484036740815,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,20.75035729144813,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,20.920904164206902,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,21.226824031247105,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,22.572255588372144,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,23.55327141867332,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,25.64324370252417,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,26.01340916877179,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,27.29870324959579,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,28.236500705830352,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,29.967451094995123,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.698812559224758,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.855585191849182,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.6550759898469134,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.4578314007326,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.2300596755670457,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,1.6886537182688066,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD002,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,1.3581606918064135,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,10.359057478776034,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD003,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,19.72380497814042,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD003,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,42.86966561510273,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD003,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,10.359057478776034,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD003,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,35.42189628371426,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD003,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,19.72380497814042,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,19.72380497814042,results/metrics/fd003_improved_predictions.csv,Recalculated from 100 rows
+FD003,Linear regression,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,57.384605505093155,results/metrics/fd003_initial_model_results.csv,Reported metric
+FD003,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,57.67990140007583,results/metrics/fd003_initial_model_results.csv,Reported metric
+FD003,Mean RUL baseline,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,93.280294589758,results/metrics/fd003_initial_model_results.csv,Reported metric
+FD003,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,35.42189628371426,results/metrics/fd003_test_metrics.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,35.42189628371426,results/metrics/fd003_test_predictions.csv,Recalculated from 100 rows
+FD003,RF + trends,CHECK,CHECK,CHECK,CHECK,official raw RUL,RMSE,19.72380497814042,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD003,RF + trends,CHECK,CHECK,CHECK,CHECK,RUL capped at 100,RMSE,10.359057478776034,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_reduction_percent,-22.10241924915238,results/training_cap_experiment/12c4b01ab682/official_test_comparison.csv,Reported metric
+FD003,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,common100_RMSE,12.620292816868048,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD003,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.132588551502586,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD003,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,raw_RMSE,21.33071926738158,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD003,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,raw_RMSE,26.04532426871798,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD003,CHECK,fixed100,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,21.33071926738158,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 100 rows
+FD003,CHECK,validation_selected,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,26.04532426871798,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 100 rows
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,32.221079537297584,results/training_cap_experiment/12c4b01ab682/validation_predictions.csv,Recalculated from 420 rows
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.673933914248032,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.916405041808636,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.760824228026026,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.860746346070227,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.107845162828545,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,13.799349052322562,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,16.392750514836077,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,28.84847095612189,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,29.05469453578104,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,29.73254948206058,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,30.15858362621376,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,30.248127089360676,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,33.28366300053627,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,40.08767582475556,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,4.370504833290175,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.265127065956022,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,6.703193124920775,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,11.490907524540162,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.6502033364072095,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,4.469167938939849,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD003,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,4.822309156460612,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,14.00857111009982,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD004,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,37.3728610358488,results/final_evaluation/tables/descriptive_best_raw_rul_results_do_not_select_on_test.csv,Reported metric
+FD004,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,55.21118465482552,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,14.00857111009982,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Iteration 3 — unadjusted,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,14.00894883226042,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Iteration 3 — conservative,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,14.681857453142433,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Baseline,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,39.45536587580408,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Iteration 2,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,37.3728610358488,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Iteration 3 — unadjusted,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,37.408465050532826,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,Iteration 3 — conservative,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,39.87417144376093,results/final_evaluation/tables/official_test_metrics_recalculated.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,37.3728610358488,results/metrics/fd004_improved_predictions.csv,Recalculated from 248 rows
+FD004,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,55.82598597803254,results/metrics/fd004_initial_model_results.csv,Reported metric
+FD004,Linear regression,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,59.321292036932306,results/metrics/fd004_initial_model_results.csv,Reported metric
+FD004,Mean RUL baseline,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,88.7496774858883,results/metrics/fd004_initial_model_results.csv,Reported metric
+FD004,Random Forest,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE,39.45536587580408,results/metrics/fd004_test_metrics.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,39.455365875804084,results/metrics/fd004_test_predictions.csv,Recalculated from 248 rows
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CHECK,common100_RMSE,14.00894883226042,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CHECK,common100_RMSE,14.681857453142436,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CHECK,raw_RMSE,37.408465050532826,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CHECK,raw_RMSE,39.87417144376093,results/metrics/iteration5_official_test_metrics.csv,Reported metric
+FD004,CHECK,RF + regimes,100,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,36.1011307548917,results/metrics/iteration5_validation_predictions.csv,Recalculated from 150 rows
+FD004,CHECK,RF + regimes,125,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,32.89347537655707,results/metrics/iteration5_validation_predictions.csv,Recalculated from 150 rows
+FD004,CHECK,RF + regimes,150,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,32.307354144096294,results/metrics/iteration5_validation_predictions.csv,Recalculated from 150 rows
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,36.17174639697783,results/metrics/iteration5_validation_predictions.csv,Recalculated from 150 rows
+FD004,CHECK,RF + trends,125,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,32.770046003445344,results/metrics/iteration5_validation_predictions.csv,Recalculated from 150 rows
+FD004,CHECK,RF + trends,150,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,32.571998627202674,results/metrics/iteration5_validation_predictions.csv,Recalculated from 150 rows
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CHECK,common100_RMSE,16.75178787499542,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + regimes,100,CHECK,CHECK,CHECK,common100_RMSE,16.874764474198347,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + regimes,125,CHECK,CHECK,CHECK,common100_RMSE,17.973721560978564,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + trends,125,CHECK,CHECK,CHECK,common100_RMSE,18.333953543847553,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + regimes,150,CHECK,CHECK,CHECK,common100_RMSE,18.686007583905468,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + trends,150,CHECK,CHECK,CHECK,common100_RMSE,19.32741880912373,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + trends,100,CHECK,CHECK,CHECK,raw_RMSE,36.14642861237049,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + regimes,100,CHECK,CHECK,CHECK,raw_RMSE,36.07664114502021,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + regimes,125,CHECK,CHECK,CHECK,raw_RMSE,32.83129302563925,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + trends,125,CHECK,CHECK,CHECK,raw_RMSE,32.69849693072977,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + regimes,150,CHECK,CHECK,CHECK,raw_RMSE,32.20015659616648,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,CHECK,RF + trends,150,CHECK,CHECK,CHECK,raw_RMSE,32.44207062024649,results/metrics/iteration5_validation_summary.csv,Reported metric
+FD004,RF + trends,CHECK,CHECK,CHECK,CHECK,official raw RUL,RMSE,37.3728610358488,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD004,RF + trends,CHECK,CHECK,CHECK,CHECK,RUL capped at 100,RMSE,14.00857111009982,results/metrics/multi_dataset_improved_test_metrics.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,RMSE_reduction_percent,26.851275843675523,results/training_cap_experiment/12c4b01ab682/official_test_comparison.csv,Reported metric
+FD004,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,common100_RMSE,14.022385327182995,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD004,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,common100_RMSE,15.135477368883208,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD004,CHECK,fixed100,CHECK,CHECK,CHECK,CHECK,raw_RMSE,37.11110620505171,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD004,CHECK,validation_selected,CHECK,CHECK,CHECK,CHECK,raw_RMSE,27.146300709293893,results/training_cap_experiment/12c4b01ab682/official_test_metrics.csv,Reported metric
+FD004,CHECK,fixed100,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,37.11110620505171,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 248 rows
+FD004,CHECK,validation_selected,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,27.146300709293893,results/training_cap_experiment/12c4b01ab682/official_test_predictions.csv,Recalculated from 248 rows
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CSV column: actual_RUL,predicted_RUL vs actual_RUL,36.202037035481084,results/training_cap_experiment/12c4b01ab682/validation_predictions.csv,Recalculated from 1050 rows
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,19.6484621566162,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,18.98740488213745,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,19.82645258934784,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,20.119309907291083,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,17.522667622969564,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,20.045170428848422,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,common100_RMSE,20.23427276650011,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,33.0134363363534,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,33.74565820311448,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,33.78272317756415,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,34.333030484556254,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,36.75129764282956,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,37.04482701110346,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE,43.318846287324675,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.704397939614523,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.169004524754232,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,3.0765067150830845,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.570952758024654,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,1.6304118256271485,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,2.2855149838684943,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
+FD004,CHECK,CHECK,CHECK,CHECK,CHECK,CHECK,raw_RMSE_sd,1.7075566324348102,results/training_cap_experiment/12c4b01ab682/validation_summary.csv,Reported metric
