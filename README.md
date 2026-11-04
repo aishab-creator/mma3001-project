@@ -188,6 +188,6 @@ The default cap experiment requires 84 validation fits (four subsets × three sp
 
 C-MAPSS represents simulated degradation. Performance depends on operating conditions, fault modes, observation horizon and validation sampling. Capped predictions do not recover exact long remaining lifetimes, and improved overall error does not establish safe near-failure behaviour. The project does not model maintenance costs, interventions or calibrated failure probabilities.
 
-Data acknowledgement: NASA Prognostics Center of Excellence, C-MAPSS Turbofan Engine Degradation Simulation Data Set. Background: Saxena, Goebel, Simon and Eklund (2008), *Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation*.
+Data acknowledgement: NASA Prognostics Centre of Excellence, C-MAPSS Turbofan Engine Degradation Simulation Data Set. Background: Saxena, Goebel, Simon and Eklund (2008), *Damage Propagation Modelling for Aircraft Engine Run-to-Failure Simulation*.
 
-AI assistance was used in notebook and documentation development. The report's AI-use statement should describe the actual assistance and the student's own implementation, execution, checking and interpretation.Code is released under the MIT licence; NASA data terms apply separately. 
+AI assistance was used in notebook and documentation development. Code is released under the MIT licence; NASA data terms apply separately. 
